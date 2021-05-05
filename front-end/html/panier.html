@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vente de cameras vintages en ligne"/>
+    <meta name="keywords" content="vente en ligne, cameras vintages, appareil photo ancien"/>
+    <title>Orinico</title>
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/front-end/css/style.css">
+</head>
+<body>
+    <header>
+        <img src="/images/15675819263013_image1.png" alt="logo entreprise" class="logo"> 
+    </header>
+    <main id="pagePanier">
+         <nav>
+            <a href="/front-end/html/index.html">Acceuil</a>
+           
+        </nav> 
+         <h1 class="text-center font-weight-light">Votre panier</h1>
+      <section id="panierProduit">
+        <h2 id="nomPanierProduit" class="text-center font-weight-light m-2">
+          Produit (s) Ajouté (s)
+        </h2>
+        <table class="table-bordered">
+          <thead id="bandTable">
+            <tr class="ligneHead">
+              <th>Produit</th>
+              <th>option lentille</th>
+              <th>Prix unitaire</th>
+              <th>Quantité</th>
+              <th>Supprimer</th>
+              <th>Prix total</th>
+            </tr>
+          </thead>
+          <tbody id="contenuPanier"></tbody>
+          <tfoot>
+            <tr>
+              <th colspan="5" class="text-center">Total de la commande</th>
+              <td id="totalC" colspan="1" class="text-center"></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div>
+          <button id="vidPanier" class="btn">vider le panier</button>
+        </div>
+      </section>
+
+      <section id="formulaire">
+        <h2 id="coord" class="text-center font-weight-light">
+          Vos coordonnées
+        </h2>
+        <form id="formClient">
+          <div class="form-group">
+            <label class="etiquette" for="lastName">Nom </label>
+            <input
+              type="text"
+              name="lastName"
+              id="nom"
+              placeholder="votre nom"
+            />
+          </div>
+          <div class="form-group">
+            <label class="etiquette"  for="firstName">Prenom </label>
+            <input
+              type="text"
+              name="firstName"
+              id="prenom"
+              placeholder="votre prenom"
+            />
+          </div>
+          <div class="form-group">
+            <label class="etiquette" for="address">Adresse </label>
+            <input
+              type="text"
+              name="address"
+              id="adresse"
+              placeholder="votre adresse"
+            />
+          </div>
+
+          <div class="form-group">
+            <label class="etiquette" for="city">Ville</label>
+            <input
+              type="text"
+              name="city"
+              id="ville"
+              placeholder="votre ville"
+            />
+          </div>
+          <div class="form-group">
+            <label class="etiquette" for="codePostal"> code postal </label>
+            <input
+              type="text"
+              name="codePostal"
+              id="code"
+              placeholder="votre code postal"
+            />
+          </div>
+          <div class="form-group">
+            <label class="etiquette" for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="votre adresse mail"
+            />
+          </div>
+          <input type="submit" id="achatFinal" value="Validez votre commande" class="btn btn-block"></input>
+        </form>
+      </section>
+
+    </main>
+    <footer>
+         <a href="mailto:hello@openclassrooms.com">Contact</a>
+    </footer>
+    <script src="/front-end/javaScript/panier.js"></script>
+    
+</body>
+</html>

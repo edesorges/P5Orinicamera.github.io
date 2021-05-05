@@ -1,0 +1,184 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 100%;
+}
+
+header {
+  background-color: #f3e9f0;
+}
+.logo {
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #c87a5a;
+}
+nav a:link {
+  color: black;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+h1 {
+  margin: 20px 0;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: #e7a9d5;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+}
+a:visited {
+  color: #261624;
+}
+#achat {
+  border: 2px solid #945def;
+}
+/*------------ page panier------------*/
+#nomPanierProduit,
+#coord {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1em;
+}
+#panierProduit {
+  border: 2px solid #c47868;
+  margin: 10px;
+}
+
+.container-pV {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #c47868;
+  height: 28em;
+  color: #5411e6;
+}
+
+.logoPv {
+  width: 250px;
+  margin: 5px 0;
+}
+
+#vidPanier {
+  border: 2px solid #f3e9ef;
+  background-color: #c97b58;
+  padding-left: 10px;
+  margin: 10px 1px 10px 200px;
+  font-size: 10px;
+}
+tr {
+  width: 100%;
+}
+td {
+  font-size: 12px;
+}
+th {
+  font-size: 10px;
+}
+#formulaire {
+  border: 2px solid #c47868;
+  margin: 10px;
+}
+
+#formClient {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+.etiquette {
+  margin-left: 5px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+#achatFinal {
+  border: 2px solid #955eee;
+  width: 80%;
+  display: inline-block;
+  margin: auto;
+}
+
+/*------------ format desktop au dessus de 1024px ------------*/
+@media screen and (min-width: 1030px) {
+  .logo {
+    width: 20em;
+  }
+  h1 {
+    margin: 30px 0 20px 0;
+  }
+  #cameras {
+    height: 69vh;
+  }
+
+  #article-produits {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+  }
+  article {
+    width: 40%;
+  }
+  footer {
+    height: 10vh;
+  }
+  .articleOption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #panierProduit {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+  }
+  #panierProduit {
+    margin: 50px;
+  }
+  #vidPanier {
+    margin-left: 1300px;
+  }
+  tr {
+    width: 100%;
+  }
+  td,
+  th {
+    font-size: 1em;
+  }
+
+  #formulaire {
+    font-size: 1.5em;
+    margin: 50px;
+  }
+
+  .etiquette {
+    margin-left: 35px;
+    text-align: center;
+    padding-left: 20px;
+  }
+  input {
+    width: 60%;
+    margin-right: 20px;
+  }
+}
