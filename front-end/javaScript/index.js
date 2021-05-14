@@ -14,9 +14,9 @@ fetch(url)
   })
   .catch((erreur) => {
     //console.log("erreur :" + erreur);
-    const acceuil = document.querySelector("#article");
+    const acceuil = document.querySelector("main");
     const nonConnecte = `
-    <div style="border: solid 2px #975FE4 ; width: 50%; margin: 30px 0;">
+    <div style="border: solid 2px #975FE4 ; width: 50%; margin: auto;">
             <img src="/images/vcam_2.jpg" alt="camera" style="width: 100%; margin-left: auto; margin-right: auto;">
             <p style="text-align: center; font-size: 1em; color: #5f1111 ;">serveur non fonctionnel</p>
             <a href="/front-end/html/index.html" style="display: block; text-align: center; margin: 10px; border: solid 2px #5f1111; background-color:  #f3e9f0; color: black;">Essayer a nouveau</a>
@@ -27,42 +27,41 @@ fetch(url)
     acceuil.innerHTML = nonConnecte;
   });
 
-  //--------------------------fonction pour ajouter les produits--------------------------
-  function ajoutCartes(produits) {
-    let artCameras = document.querySelector("#article-produits");
+//--------------------------fonction pour ajouter les produits--------------------------
+function ajoutCartes(produits) {
+  let artCameras = document.querySelector("#article-produits");
 
-    // boucle forEach pour parcourir le tableau recuperé
+  // boucle forEach pour parcourir le tableau recuperé
 
-    produits.forEach((item) => {
-      let carte = document.createElement("article");
-      let image = document.createElement("img");
-      let divCarte = document.createElement("div");
-      let nomCarte = document.createElement("h2");
-      let lienCarte = document.createElement("a");
+  produits.forEach((item) => {
+    let carte = document.createElement("article");
+    let image = document.createElement("img");
+    let divCarte = document.createElement("div");
+    let nomCarte = document.createElement("h2");
+    let lienCarte = document.createElement("a");
 
-      carte.classList.add("card",  "mx-auto", "m-2");
-      carte.style="width: 18rem";
+    carte.classList.add("card", "mx-auto", "m-2");
+    carte.style = "width: 18rem";
 
-      carte.id = item._id;
-      image.classList.add("card-img");
-      image.alt = "photo du produit";
-      image.src = item.imageUrl;
-      divCarte.classList.add("card-body");
-      nomCarte.classList.add("card-title", "text-center");
-      nomCarte.textContent = item.name;
-      lienCarte.classList.add("btn", "stretched-link");
-      lienCarte.id = "link";
+    carte.id = item._id;
+    image.classList.add("card-img");
+    image.alt = "photo du produit";
+    image.src = item.imageUrl;
+    divCarte.classList.add("card-body");
+    nomCarte.classList.add("card-title", "text-center");
+    nomCarte.textContent = item.name;
+    lienCarte.classList.add("btn", "stretched-link");
+    lienCarte.id = "link";
 
-      //recuperation de  l id du produit
+    //recuperation de  l id du produit
 
-      lienCarte.href = `/front-end/html/produit.html?${item._id}`;
-      lienCarte.textContent = " Detail de " + item.name;
-      console.log(item._id);
-      artCameras.appendChild(carte);
-      carte.appendChild(image);
-      carte.appendChild(divCarte);
-      divCarte.appendChild(nomCarte);
-      carte.appendChild(lienCarte);
-      
-    });
-  }
+    lienCarte.href = `/front-end/html/produit.html?${item._id}`;
+    lienCarte.textContent = " Detail de " + item.name;
+    console.log(item._id);
+    artCameras.appendChild(carte);
+    carte.appendChild(image);
+    carte.appendChild(divCarte);
+    divCarte.appendChild(nomCarte);
+    carte.appendChild(lienCarte);
+  });
+}
